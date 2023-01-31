@@ -9,8 +9,14 @@ class BooksController < ApplicationController
     if book.save
       render json: book, status: :created
     else
-      render json: book.errors, status: :unproccessable_etity
+      render json: book.errors, status: :unprocessable_etity
     end
+  end
+
+  def destroy
+    Book.find(params[:id]).destroy!
+
+    head :no_content
   end
 
   private
