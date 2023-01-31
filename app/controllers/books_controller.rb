@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+
   def index
     render json: Book.all
   end
@@ -20,8 +21,11 @@ class BooksController < ApplicationController
   end
 
   private
+
     def book_params
-    params.require(:book).permit(:title, :author)
+      params.require(:book).permit(:title, :author)
     end
-  end
+
+  
+
 end
