@@ -1,3 +1,5 @@
+module Api
+  
 class BooksController < ApplicationController
 
   def index
@@ -28,4 +30,5 @@ class BooksController < ApplicationController
 
   
 
+end
 end
